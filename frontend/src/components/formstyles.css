@@ -1,0 +1,53 @@
+.f-cont{
+    margin: 4rem 6rem;
+    color: black;
+}
+
+.f-cont form{
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.f-cont input{
+    height: 3rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    border: 1px solid black;
+}
+
+.f-cont textarea{
+    /* height: 3rem; */
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    border: 1px solid black;
+}
+
+.f-cont button{
+    display: inline;
+}
+
+@media screen and (max-width: 850px) {
+    .f-cont{
+        margin: 4rem 2rem;
+    }
+
+    .f-cont form{
+        padding-top: 2rem;
+        
+        width: 90%;
+        
+    }
+
+    input:focus {
+        background-color: yellow;
+      }
+      input {
+        background-color: #f1f1f1;
+      }
+      
+}
