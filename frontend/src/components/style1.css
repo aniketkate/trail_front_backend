@@ -1,0 +1,121 @@
+   body{
+    padding: 0;
+    top: auto;
+    background-color: #9c9d9e;
+   }
+   
+  .dropzones {
+    width: 90%;
+    max-width: 20.5em;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 3em 0.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 70%;
+    border-radius: 0.8em;
+  }
+  h3 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 2em auto;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.8em;
+    color: #010c39;
+  }
+  .draggable,
+  .drop{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+  }
+  .draggable-image {
+    width: 8em;
+    cursor: move;
+  }
+  .imag {
+    width: 8em;
+    height:7em ;
+    margin: 5px 3px;
+    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+  }
+  .images {
+    width: 90%;
+    max-width: 20.5em;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #d7c4dc;
+    padding: 0.6em 0.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 30%;
+    border-radius: 0.8em;
+  }
+  .dropped {
+    padding: 0;
+    background-color: #e5ffc8;
+  }
+  .result{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #ede2e2;
+    flex-direction:column;
+    color: #050506;
+    top: 0;
+    font-size: 2rem;
+  }
+  .controls button {
+    font-size: 1.12em;
+    padding: 0.8em 1em;
+    border-radius: 0.2em;
+    border: none;
+    outline: none;
+    color: #9c9d9e;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  }
+  .score {
+    color: #070707;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    padding-left:86%;
+    padding-top: 10%;
+    
+    z-index: 10000;
+  }
+  .hide {
+    display: none;
+  }
+
+  .dropzone{
+    padding: 2px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0.8rem 0.8rem;
+    height:13rem ;
+    border: 0.25em dashed #010c39;
+    border-radius: 0.8em;
+    width: 12em;
+
+  }
+  .dropzone img{
+    padding: 0;
+    margin: 0;
+  }

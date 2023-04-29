@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import {  useNavigate } from "react-router-dom";
 
 function RegisterForm() {
   const [formState, setFormState] = useState({
@@ -9,6 +10,7 @@ function RegisterForm() {
     password: '',
     age: '',
   });
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     console.log("posted")
@@ -20,6 +22,7 @@ function RegisterForm() {
               'Access-Control-Allow-Origin': '*',
             },
           });
+          navigate("/");
           
       console.log(response.data);
     } catch (error) {
@@ -40,7 +43,7 @@ function RegisterForm() {
       <div style={{ width: '100%', height: '100px' }}></div>
 
       <h1>Register Form!</h1>
-      <form onSubmit={handleSubmit}>
+      <form action='/'  onSubmit={handleSubmit}>
         <input
           name="name"
           placeholder="Name"
@@ -86,7 +89,7 @@ function RegisterForm() {
           ))}
         </select>
 
-        <button type="submit" style={{ fontSize: '20px' }}>
+        <button type="submit" action="/contact" style={{ fontSize: '20px' }}>
           Sign up
         </button>
       </form>
