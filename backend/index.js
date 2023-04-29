@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
 require('./config')
 
+//////////////////////////////////DATABASE SECTION ////////////////////////////////////////////
+
 const userSchema = new mongoose.Schema({
   username: { type: String, 
   unique: true },
@@ -17,6 +19,7 @@ const userSchema = new mongoose.Schema({
 
 const db = mongoose.model('User', userSchema);
 
+///////////////////////////////////////  MIDDLEWARE SECTION  ///////////////////////////////
 app.use(cors());
 const bodyParser = require('body-parser');
 
@@ -25,6 +28,10 @@ const bodyParser = require('body-parser');
 
 // parse application/json
 app.use(bodyParser.json());
+
+
+/////////////////////////////////////// API's SECTION ////////////////////////////////////
+
 
 app.post('/register', async (req, resp) => {
 
@@ -52,6 +59,8 @@ app.post('/register', async (req, resp) => {
     console.log(err);
   }
 });
+
+//////////////////////////////////////////////// APi's initialization /////////////////////////////
 
 app.listen(5000, () => {
   console.log('Server started on port 5000');
