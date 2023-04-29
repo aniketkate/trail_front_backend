@@ -72,17 +72,27 @@ function Quize() {
   
     if (dropzoneId === data) {
       setScore(score + 1);
-      setCount(count+1);
+      setCount(count + 1);
     } else {
-      setCount(count+1);
+      setCount(count + 1);
     }
   
     if (draggedImage instanceof Node) {
+      let parent = dropzone.parentNode;
+      while (parent !== document) {
+        if (parent === draggedImage) {
+          console.error("draggedImage is an ancestor of the parent");
+          return;
+        }
+        parent = parent.parentNode;
+      }
       dropzone.appendChild(draggedImage);
     } else {
       console.error("draggedImage is not a valid Node object");
     }
   }
+  
+
   
   useEffect(() => {
     if (score === 3 && count>5) {
@@ -201,3 +211,5 @@ function Quize() {
 }
 
 export default Quize;
+
+
