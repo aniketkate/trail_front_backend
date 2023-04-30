@@ -57,7 +57,7 @@ img{
     color: black;
 }
 
-@media  and (max-width: 555px) {
+@media  (max-width: 555px) {
     .hero-text h1{
         padding: 10px 20px;
     }
