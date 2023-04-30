@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import {  useNavigate } from "react-router-dom";
+import { useNavigate, Link } from 'react-router-dom';
 
 function RegisterForm() {
   const [formState, setFormState] = useState({
@@ -13,17 +13,19 @@ function RegisterForm() {
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
-    console.log("posted")
+    console.log('posted');
     event.preventDefault();
     try {
-
-        const response = await axios.post('http://localhost:5000/register', formState, {
-            headers: {
-              'Access-Control-Allow-Origin': '*',
-            },
-          });
-          navigate("/");
-          
+      const response = await axios.post(
+        'http://localhost:5000/register',
+        formState,
+        {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      );
+      navigate('/');
       console.log(response.data);
     } catch (error) {
       console.error(error);
@@ -43,7 +45,7 @@ function RegisterForm() {
       <div style={{ width: '100%', height: '100px' }}></div>
 
       <h1>Register Form!</h1>
-      <form action='/'  onSubmit={handleSubmit}>
+      <form action="/" onSubmit={handleSubmit}>
         <input
           name="fullname"
           placeholder="Name"
@@ -88,13 +90,18 @@ function RegisterForm() {
             </option>
           ))}
         </select>
-
+            
         <button type="submit" action="/contact" style={{ fontSize: '20px' }}>
           Sign up
         </button>
       </form>
+      <br></br>
+      <div>
+        Already have an account? <Link to="/login">Click here to login</Link>.
+      </div>
     </div>
   );
 }
 
 export default RegisterForm;
+

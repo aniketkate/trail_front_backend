@@ -9,6 +9,7 @@ import About from "./routes/About";
 import Contact from "./routes/Contact";
 import Register from "./routes/Register";
 import QuizeMTP from "./routes/Quize";
+import Login from "./routes/login";
 
 export default function App() {
   return(
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/contact" exact element={<Contact />}/> 
           <Route path="/register" exact element={<Register/>}/>
           <Route path="/quize" exact element={<QuizeMTP/>}/>
+          <Route path="/login" exact element={<Login/>}/>
       </Routes>
 
       {/* <Navbar /> */}
