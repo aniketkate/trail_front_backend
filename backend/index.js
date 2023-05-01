@@ -94,8 +94,15 @@ app.get('/home', isAuthenticated, function (req, res) {
 });
 
 app.post('/login', passport.authenticate('local'), (req, res) => {
-  res.json(req.user);
+  req.login(req.user, function(err) {
+    if (err) {
+      console.log(err);
+      return res.status(500).json({ message: 'Server Error' });
+    }
+    return res.json(req.user);
+  });
 });
+
 
 app.post('/register', async (req, resp) => {
 
