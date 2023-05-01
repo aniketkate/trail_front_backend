@@ -42,6 +42,7 @@ img{
 .hero-text h2{
     font-size: 2rem;
     font-weight: 700;
+    margin: 1rem 2rem;
     color: rgb(14, 7, 7);
     
 }
@@ -55,9 +56,17 @@ img{
     font-weight: bold;
     letter-spacing: 2px;
     color: black;
+    border-radius: 0.8rem;
+}
+.hero-text .show:hover{
+    background-color: rgb(67, 90, 150);
+    cursor: pointer;
 }
 
-@media  (max-width: 555px) {
+
+
+
+@media (max-width: 555px) {
     .hero-text h1{
         padding: 10px 20px;
     }
