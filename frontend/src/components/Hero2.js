@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 import thoughtsData from "./thoughtsData";
 import "./Hero2style.css"
 
-function HomeComponent2(props) {
+const userName = localStorage.getItem('userName'); 
+
+function HomeComponent2() {
     const [thought, setThought] = useState(thoughtsData[0]);
 
     const updateThought = () => {
@@ -26,7 +28,7 @@ function HomeComponent2(props) {
       <div className="userinfo">
         <Link className="user">
           <i className="fas fa-user"></i>
-          <h1>{props.username}</h1>
+          <h1>{userName}</h1>
         </Link>
         <Link className="info1">
             <h3>Streak</h3>

@@ -25,6 +25,9 @@ function RegisterForm() {
           },
         }
       );
+      const userName = formState.username || 'user';
+      console.log(userName);
+      localStorage.setItem('userName', userName);
       navigate('/');
       console.log(response.data);
     } catch (error) {
