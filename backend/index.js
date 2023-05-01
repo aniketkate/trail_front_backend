@@ -2,8 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt')
-require('./config')
+const bcrypt = require('bcrypt');
+require('./config');
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
@@ -99,9 +99,12 @@ app.post('/login', passport.authenticate('local'), (req, res) => {
       console.log(err);
       return res.status(500).json({ message: 'Server Error' });
     }
+
+    // Return the user object as part of the response
     return res.json(req.user);
   });
 });
+
 
 
 app.post('/register', async (req, resp) => {
