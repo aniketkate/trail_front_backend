@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import Hero2 from "../components/Hero2"
 
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
         url="/"
         btnClass="show"
         />
+        <Hero2 username="user"/>
         </>
     );
 }

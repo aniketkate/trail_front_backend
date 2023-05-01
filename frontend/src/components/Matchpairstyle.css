@@ -1,0 +1,36 @@
+*{
+    text-decoration: none;
+}
+.pairs{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(159, 155, 155);
+    
+    
+}
+.pairs h1{
+    margin: 4rem 16rem;
+    font-size:  4rem;
+}
+
+.level{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    font-size: 1.2rem;
+    border: 2px solid #333;
+    margin: 1.2rem 9rem;
+    border-radius: 50%;
+    background-color:  rgba(39, 1, 1, 0.647);
+    
+ 
+}
+.level h3{
+    text-decoration: none;
+    color:rgb(248, 97, 42);
+    margin: 0;
+}
