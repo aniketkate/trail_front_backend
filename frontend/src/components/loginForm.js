@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+
   const [error, setError] = useState('');
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,9 +19,12 @@ function LoginForm() {
         password,
       });
 
+
+
       // If authentication was successful, store the user object in local storage and redirect the user to the home page
       localStorage.setItem('user', JSON.stringify(response.data));
       window.location.href = '/';
+
     } catch (error) {
       console.error(error);
       setError('Invalid email or password. Please try again.');

@@ -1,7 +1,7 @@
-   body{
+  body{
     padding: 0;
     top: auto;
-    background-color: #9c9d9e;
+   
    }
    
   .dropzones {
@@ -20,16 +20,7 @@
     left: 70%;
     border-radius: 0.8em;
   }
-  h3 {
-    text-align: center;
-    width: 60%;
-    margin: 0 auto 2em auto;
-    font-size: 1.2em;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    line-height: 1.8em;
-    color: #010c39;
-  }
+
   .draggable,
   .drop{
     display: flex;

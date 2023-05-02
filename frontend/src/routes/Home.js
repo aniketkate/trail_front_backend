@@ -33,8 +33,19 @@ function Home() {
             <div>
       {/* {user && (
         <>
-          <h1>Welcome, {user.name}!</h1>
-          <p>Email: {user.email}</p>
+
+        <Navbar/>
+        <Hero 
+        cName="hero"
+        heroImg="https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/142875012_4213934451963824_4908626115809418460_o-1024x768.jpg"
+        title="Welcome"
+        text="Your Journey begins here"
+        buttonText="VISIT HERE"
+        url="/Register"
+        btnClass="show"
+        />
+        <Hero2 username="user"/>
+
         </>
       )} */}
     </div>
