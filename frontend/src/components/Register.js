@@ -25,7 +25,7 @@ function RegisterForm() {
           },
         }
       );
-      const userName = formState.username || 'user';
+      const userName = formState.username || 'User';
       console.log(userName);
       localStorage.setItem('userName', userName);
       navigate('/');

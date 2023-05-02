@@ -1,18 +1,25 @@
 *{
     text-decoration: none;
 }
+.mtp{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;   
+    height: 100%;
+    background-color: rgb(202, 193, 193);
+    z-index: 1000;
+    padding-top: 7rem ;
+}
 .pairs{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: rgb(159, 155, 155);
-    
-    
+    flex-wrap: wrap;   
 }
-.pairs h1{
-    margin: 4rem 16rem;
+.ph1{
     font-size:  4rem;
+    margin: 3rem 2rem;
 }
 
 .level{

@@ -1,0 +1,57 @@
+
+
+.rquiz{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    height:700px;
+    width:100%;
+    /*background-image: url("../../public/photos/quize1.png");*/
+    background-color: rgb(236, 196, 225);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index:100;
+}
+.question{
+    font-size: 3rem;
+    color: rgb(9, 9, 9);
+   
+    margin-top: 8rem;
+
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.option{
+    text-decoration: none;
+    margin: 1.6rem 1.6rem;
+    background: none;
+    font-size: 2rem;
+    color: rgb(170, 8, 137);
+}
+.option:hover{
+    color: rgb(245, 237, 234);
+    background-color: rgb(128, 125, 125);
+}
+.result{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #504444;
+    flex-direction:column;
+    color: #050506;
+    top: 0;
+    font-size: 2rem;
+  }
+  .hide{
+    display: none;
+  }
