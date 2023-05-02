@@ -35,18 +35,21 @@ function HomeComponent2() {
       <div className="userinfo">
         <Link className="user">
           <i className="fas fa-user"></i>
-          <h1>{user && (
-        <>
-          Welcome, {user.fullname}!
-        </>
-      )}</h1>
+          {user ? (
+            <h1>Welcome, {user.fullname}!</h1>
+          ) : (
+            <h1>Loading user...</h1>
+          )}
         </Link>
-        <Link className="info1">
+        <div className="info1">
           <h3>Streak</h3>
+          {user && <h4>{user.coins}</h4>}
           <h3>Coins</h3>
+          {user && <h4>{user.coins}</h4>}
           <h3>Leader Board</h3>
-        </Link>
+        </div>
       </div>
+
       <div className="divisions">
         <div className="values">
           <Link to="/">

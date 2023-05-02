@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
     unique: true
   },
   age: { type: Number },
-
+  quizScore: { type: Number, default: 0 },
+  coins: { type: Number, default: 0 },
 
 });
 

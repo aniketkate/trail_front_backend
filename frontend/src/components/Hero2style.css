@@ -59,7 +59,8 @@
     align-items:flex-start;
     justify-content: space-around;
     flex-direction: column;
-    height: 300px;
+    align-items: center;
+    height: 320px;
     width: 200px;
     color:rgb(248, 97, 42);
     border-radius:15px;
