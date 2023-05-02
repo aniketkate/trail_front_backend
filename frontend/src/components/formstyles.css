@@ -1,6 +1,9 @@
 .f-cont{
-    margin: 4rem 6rem;
+    background-image: url("./../../public/bg.png");
+    background-size: cover;
     color: black;
+    width: 100%;
+    height:740px;
 }
 
 .f-cont form{
@@ -10,7 +13,15 @@
     width: 50%;
     margin: auto;
 }
-
+.ltitle{
+    margin: 2rem 3rem;
+}
+.lform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .f-cont input{
     height: 3rem;
     padding: 0 1rem;
@@ -29,7 +40,21 @@
 
 .f-cont button{
     display: inline;
+    margin: 2rem 3rem;
 }
+.linput{
+    height: 2.3rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    border: 1px solid black;
+    width: 20rem;
+}
+.lbtn{
+    display: inline;
+    margin: 2rem 3rem;
+}
+
 
 @media screen and (max-width: 850px) {
     .f-cont{
@@ -47,7 +72,19 @@
         background-color: yellow;
       }
       input {
-        background-color: #f1f1f1;
+        background-color: #f1f1f100;
       }
       
+}
+.g1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url("./../../public/bg.png");
+    width: 100%;
+    height: 720px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
