@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/loginForm";
-import { Link } from "react-router-dom";
+
 import Navbar from "../components/Navbar";
 
 function LoginPage() {
@@ -15,7 +15,6 @@ function LoginPage() {
         <Navbar/>
       <h1>Login Page</h1>
       <LoginForm onSuccess={handleLoginSuccess} />
-      <p>Don't have an account? <Link to="/register">Register here</Link>.</p>
     </div>
   );
 }
