@@ -8,10 +8,12 @@ import Service from "./routes/Service";
 import About from "./routes/About";
 import Contact from "./routes/Contact";
 import Register from "./routes/Register";
-//import QuizeMTP from "./routes/Quize";
+import RQuize from "./routes/Levels";
+import Quize from "./routes/Rquizroutes";
 import Login from "./routes/login";
 import QuizeMTP from "./routes/Quizroutes";
-import Mtf from "./components/Matchpairs"
+import Mtf from "./routes/Levels";
+localStorage.removeItem('username');
 
 export default function App() {
   return(
@@ -22,10 +24,12 @@ export default function App() {
           <Route path="/about" exact element={<About/>}/>
           <Route path="/contact" exact element={<Contact />}/> 
           <Route path="/register" exact element={<Register/>}/>
-          <Route path="/quize" exact element={<Mtf/>}/>
+          <Route path="/quize" exact element={<Mtf title="Match The Pairs" name="quize"/>}/>
+          <Route path="/rquiz" exact element={<RQuize title="Quizes"  name="rquize"/>}/>
           <Route path="/login" exact element={<Login/>}/>
       </Routes>
       <QuizeMTP/>
+      <Quize/>
     </div>
   )
 }

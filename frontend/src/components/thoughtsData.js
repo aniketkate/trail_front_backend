@@ -26,8 +26,8 @@ const thoughtsData = [
     },
     {
       id: 6,
-      text: "Thought 2",
-      author: "Author 2"
+      text: "Action is the fundamental key to success.",
+    author: "Pablo Picasso"
     },
     {
       id: 2,

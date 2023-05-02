@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -13,6 +14,10 @@ function LoginForm() {
         password,
       });
       console.log(response.data); // handle response from backend
+      const userName = response.data.username || 'user';
+      console.log(userName);
+      localStorage.setItem('userName', userName);
+      navigate('/');
     } catch (error) {
       console.error(error);
     }

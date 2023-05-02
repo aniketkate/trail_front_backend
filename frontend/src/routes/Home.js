@@ -13,7 +13,7 @@ function Home() {
         title="Welcome"
         text="Your Journey begins here"
         buttonText="VISIT HERE"
-        url="/"
+        url="/Register"
         btnClass="show"
         />
         <Hero2 username="user"/>

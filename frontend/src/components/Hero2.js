@@ -7,7 +7,7 @@ const userName = localStorage.getItem('userName');
 
 function HomeComponent2() {
     const [thought, setThought] = useState(thoughtsData[0]);
-
+    const username = userName || 'User';
     const updateThought = () => {
       const today = new Date();
       const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
@@ -28,7 +28,7 @@ function HomeComponent2() {
       <div className="userinfo">
         <Link className="user">
           <i className="fas fa-user"></i>
-          <h1>{userName}</h1>
+          <h1>{username}</h1>
         </Link>
         <Link className="info1">
             <h3>Streak</h3>
@@ -58,7 +58,7 @@ function HomeComponent2() {
           </Link>
         </div>
         <div className="values">
-          <Link to="/">
+          <Link to="/rquiz">
             <h1> Quiz</h1>
           </Link>
         </div>
