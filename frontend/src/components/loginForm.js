@@ -30,6 +30,7 @@ function LoginForm() {
     <div className="g1">
       <div className="login_form_container">
         <div className="left">
+
           
           <form onSubmit={handleSubmit} className="form_container">
             <h1>Login to Your Account</h1>
