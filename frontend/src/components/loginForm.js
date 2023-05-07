@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +18,7 @@ function LoginForm() {
 
       // If authentication was successful, store the user object in local storage and redirect the user to the home page
       localStorage.setItem('user', JSON.stringify(response.data));
-      window.location.href = '/';
+      window.location.href = '/Dashboard';
 
     } catch (error) {
       console.error(error);

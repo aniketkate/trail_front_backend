@@ -6,14 +6,6 @@ import { useState, useEffect } from 'react';
 
 
 function Home() {
-    const [user, setUser] = useState(null);
-
-    useEffect(() => {
-        const userString = localStorage.getItem('user');
-        // const User = JSON.parse(userString);
-        setUser(user);
-        console.log(user);
-    }, []);
     return (
         <div>
             
