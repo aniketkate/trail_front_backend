@@ -13,6 +13,8 @@ import Quize from "./routes/Rquizroutes";
 import Login from "./routes/login";
 import QuizeMTP from "./routes/Quizroutes";
 import Mtf from "./routes/Levels";
+import Dashboard from "./routes/Dashboard";
+
 localStorage.removeItem('username');
 
 export default function App() {
@@ -27,6 +29,7 @@ export default function App() {
           <Route path="/quize" exact element={<Mtf title="Match The Pairs" name="quize"/>}/>
           <Route path="/rquiz" exact element={<RQuize title="Quizes"  name="rquize"/>}/>
           <Route path="/login" exact element={<Login/>}/>
+          <Route path="/dashboard" exact element={<Dashboard/>}/>
       </Routes>
       <QuizeMTP/>
       <Quize/>

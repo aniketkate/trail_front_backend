@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import Hero2 from "../components/Hero2"
+// import Hero2 from "../components/Hero2"
 import { useState, useEffect } from 'react';
 
 
@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
         const userString = localStorage.getItem('user');
-        const user = JSON.parse(userString);
+        // const User = JSON.parse(userString);
         setUser(user);
         console.log(user);
     }, []);
@@ -28,7 +28,7 @@ function Home() {
                     url="/"
                     btnClass="show"
                 />
-                <Hero2 username="user" />
+                {/* <Hero2 username="user" /> */}
             </>
             <div>
       {/* {user && (

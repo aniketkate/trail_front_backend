@@ -1,11 +1,12 @@
-import { Component } from "react";
+import { Component , useState } from "react";
 import "./Navbarstyles.css";
 import { Menuitems } from "./Menuitems";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 class Navbar extends Component {
+  
   state = { clicked: false };
-
+  
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
@@ -16,7 +17,9 @@ class Navbar extends Component {
   };
 
   render() {
+  
     const user = JSON.parse(localStorage.getItem('user'));
+    
   
     return (
       <nav className="NavbarItems">
@@ -40,7 +43,7 @@ class Navbar extends Component {
           {user ? (
             <li className="dropdown">
               <a href="#!" className="dropbtn">
-                {user.name} {user.fullname} <i className="fa fa-caret-down"></i>
+                 {user.fullname} <i className="fa fa-caret-down"></i>
               </a>
               <div className="dropdown-content">
                 <button onClick={this.handleLogout}>Logout</button>

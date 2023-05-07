@@ -32,14 +32,17 @@ function HomeComponent2() {
     return () => clearInterval(intervalId); // clear interval when component unmounts
   }, []);
 
-
+  
   return (
     <div className="content">
       <div className="userinfo">
         <Link className="user">
           <i className="fas fa-user"></i>
-
-
+          {user ? (
+            <h1>Welcome, {user.fullname}!</h1>
+          ) : (
+            <h1>Loading user...</h1>
+          )}
         </Link>
         <div className="info1">
           <h3>Streak</h3>
@@ -72,7 +75,7 @@ function HomeComponent2() {
           </Link>
         </div>
         <div className="values">
-          <Link to="/rquiz">
+          <Link to="/">
             <h1> Quiz</h1>
           </Link>
         </div>
